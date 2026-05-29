@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: tester-pod
+  name: tester-pod
+spec:
+  containers:
+  - image: busybox
+    name: tester-pod
+    command: ["sleep", "3600"]
+    envFrom:
+    - configMapRef:
+        name: app-config-v2
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

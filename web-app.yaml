@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: web-app
+  name: web-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - image: nginx:1.25
+        name: nginx
+        volumeMounts:
+        - name: web-content-volume
+          mountPath: /usr/share/nginx/html
+        resources: {}
+      volumes:
+      - name: web-content-volume
+        configMap:
+          name: web-content
+status: {}
