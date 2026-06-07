@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: drill-deploy-1
+  name: drill-deploy-1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: drill-deploy-1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: drill-deploy-1
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}

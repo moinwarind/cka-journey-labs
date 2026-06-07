@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: mysql-db
+  name: mysql-db
+spec:
+  containers:
+  - image: mysql:8
+    name: mysql-db
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

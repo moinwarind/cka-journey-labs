@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: busybox-debug
+  name: busybox-debug
+spec:
+  containers:
+  - image: busybox
+    name: busybox-debug
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

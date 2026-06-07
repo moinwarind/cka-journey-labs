@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: drill-pod-5
+  name: drill-pod-5
+spec:
+  containers:
+  - image: nginx
+    name: drill-pod-5
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
