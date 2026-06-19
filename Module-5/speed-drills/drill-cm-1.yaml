@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  region: eu-west
+  username: moin
+kind: ConfigMap
+metadata:
+  name: drill-cm-1

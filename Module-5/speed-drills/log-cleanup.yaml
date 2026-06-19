@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: log-cleanup
+spec:
+  jobTemplate:
+    metadata:
+      name: log-cleanup
+    spec:
+      template:
+        metadata: {}
+        spec:
+          containers:
+          - image: busybox
+            name: log-cleanup
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: '*/5 * * * *'
+status: {}
