@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: drill-env-2
+  name: drill-env-2
+spec:
+  containers:
+  - image: nginx
+    name: drill-env-2
+    envFrom:
+      - configMapRef:
+          name: app-env-cm 
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

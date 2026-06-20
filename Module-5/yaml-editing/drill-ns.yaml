@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: staging
+  labels:
+    run: drill-ns  
+  name: drill-ns
+spec:
+  containers:
+  - image: nginx
+    name: drill-ns
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

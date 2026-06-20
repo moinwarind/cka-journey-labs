@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: drill-labels
+    app: web
+    tier: frontend
+  name: drill-labels
+spec:
+  containers:
+  - image: nginx
+    name: drill-labels
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
