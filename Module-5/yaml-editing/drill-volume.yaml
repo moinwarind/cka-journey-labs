@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: drill-volume
+  name: drill-volume
+spec:
+  containers:
+  - image: nginx
+    name: drill-volume
+    resources: {}
+    volumeMounts:
+    - name: "scratch"
+      mountPath: /tmp/scratch
+  volumes:
+  - name: "scratch"
+    emptyDir: {}  
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
