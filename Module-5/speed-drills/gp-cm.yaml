@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  region: eu
+  tier: dev
+kind: ConfigMap
+metadata:
+  name: gp-cm

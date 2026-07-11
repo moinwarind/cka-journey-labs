@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: warmup-deploy
+  name: warmup-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: warmup-deploy
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: warmup-deploy
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+        resources: {}
+status: {}
