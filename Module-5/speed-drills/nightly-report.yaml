@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: nightly-report
+spec:
+  jobTemplate:
+    metadata:
+      name: nightly-report
+    spec:
+      template:
+        metadata: {}
+        spec:
+          containers:
+          - image: busybox
+            name: nightly-report
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: 0 23 * * *
+status: {}
