@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  lang: nl
+  theme: dark
+kind: ConfigMap
+metadata:
+  name: ui-prefs

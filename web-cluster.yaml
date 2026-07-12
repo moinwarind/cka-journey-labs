@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: api-server
-  name: api-server
+    app: web-cluster
+  name: web-cluster
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: api-server
+      app: web-cluster
   strategy: {}
   template:
     metadata:
       labels:
-        app: api-server
+        app: web-cluster
     spec:
       containers:
-      - image: python:3.8
-        name: python
+      - image: nginx:latest
+        name: nginx
         resources: {}
 status: {}

@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: api-server
-  name: api-server
+    app: front-line
+  name: front-line
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
-      app: api-server
+      app: front-line
   strategy: {}
   template:
     metadata:
       labels:
-        app: api-server
+        app: front-line
     spec:
       containers:
-      - image: python:3.8
-        name: python
+      - image: nginx:1.27
+        name: nginx
         resources: {}
 status: {}

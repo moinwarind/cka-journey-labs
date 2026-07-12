@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: r4
+spec:
+  jobTemplate:
+    metadata:
+      name: r4
+    spec:
+      template:
+        metadata: {}
+        spec:
+          containers:
+          - image: busybox
+            name: r4
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: 45 7 * * 1-5
+status: {}

@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: db-migrate
+spec:
+  template:
+    metadata: {}
+    spec:
+      containers:
+      - image: alpine
+        name: db-migrate
+        resources: {}
+      restartPolicy: Never
+status: {}

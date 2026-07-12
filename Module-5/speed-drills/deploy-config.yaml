@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  region: us-east
+  tier: prod
+kind: ConfigMap
+metadata:
+  name: deploy-config

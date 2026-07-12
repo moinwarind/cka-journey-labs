@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  app_env: prod
+  log_level: debug
+kind: ConfigMap
+metadata:
+  name: app-settings

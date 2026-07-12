@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: db-backup
+spec:
+  jobTemplate:
+    metadata:
+      name: db-backup
+    spec:
+      template:
+        metadata: {}
+        spec:
+          containers:
+          - image: alpine
+            name: db-backup
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: 30 2 * * *
+status: {}

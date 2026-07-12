@@ -5,7 +5,7 @@ metadata:
     app: api-server
   name: api-server
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: api-server
@@ -16,7 +16,9 @@ spec:
         app: api-server
     spec:
       containers:
-      - image: python:3.8
+      - image: python:3.9
         name: python
+        ports:
+        - containerPort: 9000
         resources: {}
 status: {}

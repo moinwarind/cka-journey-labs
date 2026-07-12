@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: clean-up
+spec:
+  template:
+    metadata: {}
+    spec:
+      containers:
+      - image: alpine
+        name: clean-up
+        resources: {}
+      restartPolicy: Never
+status: {}

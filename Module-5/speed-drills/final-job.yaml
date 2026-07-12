@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: final-job
+spec:
+  template:
+    metadata: {}
+    spec:
+      containers:
+      - image: alpine
+        name: final-job
+        resources: {}
+      restartPolicy: Never
+status: {}

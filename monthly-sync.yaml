@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: monthly-sync
+spec:
+  jobTemplate:
+    metadata:
+      name: monthly-sync
+    spec:
+      template:
+        metadata: {}
+        spec:
+          containers:
+          - image: alpine
+            name: monthly-sync
+            resources: {}
+          restartPolicy: OnFailure
+  schedule: 0 3 * * 0
+status: {}

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: debug-shell
+  name: debug-shell
+spec:
+  containers:
+  - image: nginx
+    name: debug-shell
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

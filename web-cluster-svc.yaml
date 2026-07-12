@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: web-cluster
+  name: web-cluster
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 443
+  selector:
+    app: web-cluster
+status:
+  loadBalancer: {}

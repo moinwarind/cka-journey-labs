@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: quick-task
+spec:
+  template:
+    metadata: {}
+    spec:
+      containers:
+      - image: busybox
+        name: quick-task
+        resources: {}
+      restartPolicy: Never
+status: {}

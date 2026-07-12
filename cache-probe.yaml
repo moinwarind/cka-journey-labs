@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: cache-probe
+  name: cache-probe
+spec:
+  containers:
+  - image: redis
+    name: cache-probe
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
